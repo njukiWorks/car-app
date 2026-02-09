@@ -1,3 +1,12 @@
+Admin Main Page
+<img width="1361" height="672" alt="Screenshot 2026-02-10 024253" src="https://github.com/user-attachments/assets/3893e36c-c88a-4d61-8e2e-a12e09d3610a" />
+
+Add Car
+<img width="1361" height="676" alt="Screenshot 2026-02-10 024334" src="https://github.com/user-attachments/assets/c3c810b6-1cbc-4859-ab94-792a0aaf057c" />
+
+Public Page (UI)
+<img width="1351" height="666" alt="Screenshot 2026-02-10 024435" src="https://github.com/user-attachments/assets/d27f1ea5-55d5-40f5-b323-aec703fc0b1e" />
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -28,6 +37,7 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
 
 ## Deploy on Vercel
 

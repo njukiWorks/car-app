@@ -49,79 +49,142 @@ export default function NewCarPage() {
 
   return (
     <div>
-      <h1 className="text-xl font-bold">New car</h1>
+      <h1 className="text-xl font-bold">New Car</h1>
 
       <form className="mt-6 grid gap-4" onSubmit={onSubmit}>
-        <Input
-          placeholder="Title"
-          value={form.title}
-          onChange={(e) => setForm({ ...form, title: e.target.value })}
-        />
+        <div className="grid gap-2">
+          <label className="text-sm font-medium" htmlFor="title">
+            Title
+          </label>
+          <Input
+            id="title"
+            placeholder="Toyota Premio 2016"
+            value={form.title}
+            onChange={(e) => setForm({ ...form, title: e.target.value })}
+          />
+        </div>
+
         <div className="grid gap-4 sm:grid-cols-2">
-          <Input
-            placeholder="Make"
-            value={form.make}
-            onChange={(e) => setForm({ ...form, make: e.target.value })}
-          />
-          <Input
-            placeholder="Model"
-            value={form.model}
-            onChange={(e) => setForm({ ...form, model: e.target.value })}
-          />
+          <div className="grid gap-2">
+            <label className="text-sm font-medium" htmlFor="make">
+              Make
+            </label>
+            <Input
+              id="make"
+              placeholder="Toyota"
+              value={form.make}
+              onChange={(e) => setForm({ ...form, make: e.target.value })}
+            />
+          </div>
+          <div className="grid gap-2">
+            <label className="text-sm font-medium" htmlFor="model">
+              Model
+            </label>
+            <Input
+              id="model"
+              placeholder="Premio"
+              value={form.model}
+              onChange={(e) => setForm({ ...form, model: e.target.value })}
+            />
+          </div>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-3">
-          <Input
-            placeholder="Year"
-            type="number"
-            value={form.year}
-            onChange={(e) => setForm({ ...form, year: Number(e.target.value) })}
-          />
-          <Input
-            placeholder="Price"
-            type="number"
-            value={form.price}
-            onChange={(e) =>
-              setForm({ ...form, price: Number(e.target.value) })
-            }
-          />
-          <Input
-            placeholder="Currency"
-            value={form.currency}
-            onChange={(e) => setForm({ ...form, currency: e.target.value })}
-          />
+          <div className="grid gap-2">
+            <label className="text-sm font-medium" htmlFor="year">
+              Year
+            </label>
+            <Input
+              id="year"
+              placeholder="2016"
+              type="number"
+              value={form.year}
+              onChange={(e) =>
+                setForm({ ...form, year: Number(e.target.value) })
+              }
+            />
+          </div>
+          <div className="grid gap-2">
+            <label className="text-sm font-medium" htmlFor="price">
+              Price
+            </label>
+            <Input
+              id="price"
+              placeholder="1200000"
+              type="number"
+              value={form.price}
+              onChange={(e) =>
+                setForm({ ...form, price: Number(e.target.value) })
+              }
+            />
+          </div>
+          <div className="grid gap-2">
+            <label className="text-sm font-medium" htmlFor="currency">
+              Currency
+            </label>
+            <Input
+              id="currency"
+              placeholder="KES"
+              value={form.currency}
+              onChange={(e) => setForm({ ...form, currency: e.target.value })}
+            />
+          </div>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          <Input
-            placeholder="Mileage (km)"
-            type="number"
-            value={form.mileageKm}
-            onChange={(e) =>
-              setForm({ ...form, mileageKm: Number(e.target.value) })
-            }
-          />
-          <Input
-            placeholder="Location"
-            value={form.location}
-            onChange={(e) => setForm({ ...form, location: e.target.value })}
+          <div className="grid gap-2">
+            <label className="text-sm font-medium" htmlFor="mileageKm">
+              Mileage (km)
+            </label>
+            <Input
+              id="mileageKm"
+              placeholder="85000"
+              type="number"
+              value={form.mileageKm}
+              onChange={(e) =>
+                setForm({ ...form, mileageKm: Number(e.target.value) })
+              }
+            />
+          </div>
+          <div className="grid gap-2">
+            <label className="text-sm font-medium" htmlFor="location">
+              Location
+            </label>
+            <Input
+              id="location"
+              placeholder="Nairobi"
+              value={form.location}
+              onChange={(e) => setForm({ ...form, location: e.target.value })}
+            />
+          </div>
+        </div>
+
+        <div className="grid gap-2">
+          <label className="text-sm font-medium" htmlFor="description">
+            Description
+          </label>
+          <Textarea
+            id="description"
+            placeholder="Clean unit. Well maintained."
+            value={form.description}
+            onChange={(e) => setForm({ ...form, description: e.target.value })}
           />
         </div>
 
-        <Textarea
-          placeholder="Description"
-          value={form.description}
-          onChange={(e) => setForm({ ...form, description: e.target.value })}
-        />
-
-        <Input
-          placeholder="Images (comma-separated URLs)"
-          value={form.images}
-          onChange={(e) => setForm({ ...form, images: e.target.value })}
-        />
+        <div className="grid gap-2">
+          <label className="text-sm font-medium" htmlFor="images">
+            Images (comma-separated URLs)
+          </label>
+          <Input
+            id="images"
+            placeholder="https://example.com/image.jpg"
+            value={form.images}
+            onChange={(e) => setForm({ ...form, images: e.target.value })}
+          />
+        </div>
 
         <div className="flex gap-3">
-          <Button type="submit">Create (Draft)</Button>
+          <Button type="submit">Add Car</Button>
           <Button
             type="button"
             variant="outline"

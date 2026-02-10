@@ -19,7 +19,7 @@ export default function NewCarPage() {
     year: 2016,
     price: 1200000,
     currency: "KES",
-    mileageKm: 85000,
+    mileageKm: 35000,
     location: "Nairobi",
     description: "Clean unit. Well maintained.",
     images: "https://example.com/image.jpg",

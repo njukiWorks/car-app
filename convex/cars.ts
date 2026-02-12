@@ -17,9 +17,8 @@ export const listPublished = query({
 export const adminList = query({
   args: {},
   handler: async (ctx) => {
-    // NOTE: queries can't "requireAdmin" via mutation helper (it creates users).
-    // So we keep this simple: the admin pages will call `users.me` and redirect if not admin.
     // Server-side enforcement is done on mutations (create/update/delete).
+
     const cars = await ctx.db.query("cars").collect();
     return cars.sort((a, b) => b.updatedAt - a.updatedAt);
   },

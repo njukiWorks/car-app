@@ -14,14 +14,12 @@ export default function AdminGuard({
   const syncMe = useMutation(api.users.syncMe);
   const me = useQuery(api.users.me);
 
-  // Ensure user row exists in Convex after sign-in
   useEffect(() => {
     syncMe().catch(() => {});
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    if (me === null) return; // not ready or no user row yet
+    if (me === null) return;
     if (me && me.role !== "admin") router.replace("/");
   }, [me, router]);
 
